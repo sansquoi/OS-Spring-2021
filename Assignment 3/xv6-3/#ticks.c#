@@ -1,0 +1,30 @@
+#include "types.h"
+#include "stat.h"
+#include "user.h"
+
+int
+main(int argc, char *argv[])
+{
+  if( argc == 2 ) {
+      //printf("The argument supplied is %s\n", argv[1]);
+   }
+   else {
+      //printf("One argument expected.\n");
+     return 0;
+   }
+  
+  int argpassed = atoi(argv[1]);
+  int counter = 0;
+  while(counter<argpassed)
+  {
+    
+    counter++;
+  }
+  
+  printf(1, "%d", getticks());
+
+  //for(i = 1; i < argc; i++)
+  //  printf(1, "%s%s", argv[i], i+1 < argc ? " " : "\n");
+
+  exit();
+}

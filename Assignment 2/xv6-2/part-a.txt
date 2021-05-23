@@ -1,0 +1,37 @@
+Shubham Mazumder
+OS Assignment 2
+Part - A
+
+
+B1:
+	cr4 (before PSE is enabled): 0x0
+	cr4 (after): 0x10
+B2:
+	Intial Kernel Stack Size is 0x00001000	
+	Later, the stack size is updated to: 0x8010b5c0
+B3:
+	name = "initcode\000\000\000\000\000\000\000"
+B4:
+	The maximum number of processes that can exist at once in xv6 is 64.
+	The xv6 data structure that limits this is a statically sized process table (ptable) containing a list of proc structures, the limit for which is set to 64.
+B5:
+	Set breakpoint at exit by typing the follwowing in gdb:
+		"b exit"
+	Then in qemu-nox, call any user program, such as "ls" or "echo", or "kill".
+	Breakpoint will be hit when xv6 tries to exit the user program that we ran.
+B6:
+	ZOMBIE state.
+B7:
+	Child (process that is exiting):
+		Running p* myproc() when breakpoint hits at exit
+		Result: 
+			PID: 3
+			NAME: ls
+	
+	Parent (of exiting process):
+		Running p* myproc()->parent		 
+			PID: 2
+			NAME: sh
+	 
+
+	
